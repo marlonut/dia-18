@@ -1,0 +1,59 @@
+:root {
+  --grayish-blue: hsl(237, 18%, 59%);
+  --soft-red:hsl(345, 95%, 68%);
+  --white:hsl(0, 0%, 100%);
+  --dark-desaturated-blue:hsl(236, 21%, 26%);
+  --very-dark-blue: hsl(235, 16%, 14%);
+  --very-mostly-black:hsl(234, 17%, 12%);
+  --purple-weird:hsl(276,21%,26%);
+}
+
+body {
+  min-height: 100vh;
+}
+
+h1, body, ul {
+  margin: 0;
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+body {
+  font-family: "Red Hat Text", "sans-serif";
+  background-image: url("../assets/images/pattern-hills.svg"), url("../assets/images/bg-stars.svg"), linear-gradient(var(--very-mostly-black) 40%, var(--purple-weird) 100%);
+  background-repeat: no-repeat, repeat, repeat;
+  background-size: 1110px 170px, cover, auto;
+  background-position: -613px bottom, 0 0, top;
+}
+
+.footer {
+  position: relative;
+  top: 300px;
+}
+
+.article {
+  padding-top: 150px;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: space-between;
+  width: min(60%, 140px);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.countdown {
+  display: flex;
+  justify-content: center;
+}
+
+.flip {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+/*# sourceMappingURL=styles.css.map */

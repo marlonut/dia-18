@@ -1,0 +1,22 @@
+@use "../config/variables" as *;
+body {
+    min-height: 100vh;
+}
+h1,body,ul{
+    margin: 0;
+    
+}
+ul{
+    list-style-type: none;
+    padding-left: 0;
+}
+li{
+    
+}
+body {
+    font-family: $main-font;
+    background-image: url("../assets/images/pattern-hills.svg"), url("../assets/images/bg-stars.svg"), linear-gradient(var(--very-mostly-black) 40%, var(--purple-weird) 100%);
+    background-repeat: no-repeat, repeat, repeat;
+    background-size: 1110px 170px, cover, auto;
+    background-position: -613px bottom, 0 0, top;
+}
