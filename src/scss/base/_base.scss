@@ -1,8 +1,11 @@
 @use "../config/variables" as *;
+*,*::before,*::after{
+box-sizing: border-box;
+}
 body {
     min-height: 100vh;
 }
-h1,body,ul{
+h2,h1,body,ul{
     margin: 0;
     
 }

@@ -1,4 +1,4 @@
+@use "../functions/px-to-measure" as *;
 .footer {
-    position: relative;
-    top: 300px;
+    margin-top: px-to-measure(56px, "rem");
 }

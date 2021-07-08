@@ -1,4 +1,7 @@
+@use "../functions/px-to-measure" as *;
 .countdown {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
+    align-self: flex-start;
+    margin-top: px-to-measure(56px,"rem");
 }

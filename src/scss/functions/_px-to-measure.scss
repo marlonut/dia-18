@@ -1,0 +1,8 @@
+@function px-to-measure($size, $type) {
+    @if $type=="rem" {
+        @return $size/16px * 1rem;
+    }
+    @else {
+        @return $size/16px * 1em;
+    }
+}

@@ -1,0 +1,8 @@
+@use "../config/variables" as *;
+@use "../functions/px-to-measure" as *;
+.launch-container{
+    color:var(--white);
+    text-align: center;
+    letter-spacing: px-to-measure(6px,"em");
+    align-self: flex-end;
+}

@@ -2,7 +2,10 @@
 //layout
 @forward "./layout/footer";
 @forward "./layout/article";
+@forward "./layout/main";
 //block
 @forward "./blocks/social__icons";
 @forward "./blocks/countdown";
 @forward "./blocks/flip";
+@forward "./blocks/card";
+@forward "./blocks/launch";
