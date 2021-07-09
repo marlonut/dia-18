@@ -1,0 +1,4 @@
+mixin card-flip({extraClass,dataAttr})
+  .card(class=`${extraClass}`) 
+    .card__back(data-initial=`${dataAttr[0]}` data-last=`${dataAttr[1]}`)
+    .card__front(data-last=`${dataAttr[1]}` data-initial=`${dataAttr[0]}`)

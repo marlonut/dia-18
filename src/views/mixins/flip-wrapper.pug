@@ -1,0 +1,4 @@
+mixin flip-wrapp({title,timer,extraClass="flip__wrapper"})
+  .flip
+    +card-flip({extraClass,dataAttr:timer})
+    h2.flip__title=title
