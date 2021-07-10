@@ -1,13 +1,19 @@
 @use "../config/variables" as *;
+@use "../mixins/dektop" as *;
 @use "../functions/px-to-measure" as *;
-.flip{
+.flip {
     display: flex;
     flex-direction: column;
     text-align: center;
-    &__title{
-        margin-top: px-to-measure(32px,"em");
-        color:var(--grayish-blue);
-        font-size: min(9px,2vw);
+    @include desktop {
+       &:not(:last-child){
+           margin-right: px-to-measure(56px,"em");
+       }
+    }
+    &__title {
+        margin-top: px-to-measure(32px, "em");
+        color: var(--grayish-blue);
+        font-size: min(9px, 2vw);
         text-transform: uppercase;
     }
 }

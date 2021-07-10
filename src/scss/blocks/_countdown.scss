@@ -1,7 +1,12 @@
 @use "../functions/px-to-measure" as *;
+@use "../mixins/dektop" as *;
+
 .countdown {
     display: flex;
     justify-content: space-around;
     align-self: flex-start;
-    margin-top: px-to-measure(56px,"rem");
+    margin-top: px-to-measure(56px, "rem");
+    @include desktop {
+        justify-content: center;
+    }
 }

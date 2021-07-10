@@ -7,4 +7,5 @@
     --very-mostly-black:hsl(234, 17%, 12%);
     --purple-weird:hsl(276,21%,26%);
 }
-$main-font:'Red Hat Text',"sans-serif"
+$main-font:'Red Hat Text',"sans-serif";
+$breakpoint:( "desktop":1440px, "mobile":375px);

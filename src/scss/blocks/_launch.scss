@@ -1,8 +1,16 @@
 @use "../config/variables" as *;
 @use "../functions/px-to-measure" as *;
+@use "../mixins/dektop" as *;
+
 .launch-container{
     color:var(--white);
     text-align: center;
     letter-spacing: px-to-measure(6px,"em");
     align-self: flex-end;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+   @include desktop(){
+       margin-bottom: px-to-measure(48px,"em");
+   }
 }

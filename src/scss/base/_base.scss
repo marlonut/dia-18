@@ -1,4 +1,6 @@
 @use "../config/variables" as *;
+@use "../mixins/to-desktop" as *;
+@use "../mixins/dektop" as *;
 *,*::before,*::after{
 box-sizing: border-box;
 }
@@ -17,9 +19,14 @@ li{
     
 }
 body {
-    font-family: $main-font;
-    background-image: url("../assets/images/pattern-hills.svg"), url("../assets/images/bg-stars.svg"), linear-gradient(var(--very-mostly-black) 40%, var(--purple-weird) 100%);
-    background-repeat: no-repeat, repeat, repeat;
-    background-size: 1110px 170px, cover, auto;
-    background-position: -613px bottom, 0 0, top;
+  font-family: $main-font;
+  background-image: url("../assets/images/pattern-hills.svg"), url("../assets/images/bg-stars.svg"), linear-gradient(var(--very-mostly-black) 40%, var(--purple-weird) 100%);
+   background-size: 1100px 180px, cover, auto;
+  background-position: -613px bottom, 0 0, top;
+  background-repeat: no-repeat, repeat, repeat;
+  @include desktop(){
+    background-size: contain, cover, auto;
+    background-position: 0 bottom, 0 0, top;
+    
+  }
 }

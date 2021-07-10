@@ -1,0 +1,12 @@
+@use "../mixins/dektop" as *;
+@use "../functions/px-to-measure" as *;
+
+.title {
+    &--h1{
+        font-size:px-to-measure(18px,"rem");
+        @include desktop() {
+
+            font-size:px-to-measure(20px,"rem");
+        }
+    }
+}

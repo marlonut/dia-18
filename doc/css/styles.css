@@ -28,9 +28,15 @@ ul {
 body {
   font-family: "Red Hat Text", "sans-serif";
   background-image: url("../assets/images/pattern-hills.svg"), url("../assets/images/bg-stars.svg"), linear-gradient(var(--very-mostly-black) 40%, var(--purple-weird) 100%);
-  background-repeat: no-repeat, repeat, repeat;
-  background-size: 1110px 170px, cover, auto;
+  background-size: 1100px 180px, cover, auto;
   background-position: -613px bottom, 0 0, top;
+  background-repeat: no-repeat, repeat, repeat;
+}
+@media screen and (min-width: 1440px) {
+  body {
+    background-size: contain, cover, auto;
+    background-position: 0 bottom, 0 0, top;
+  }
 }
 
 .footer {
@@ -61,11 +67,21 @@ body {
   align-self: flex-start;
   margin-top: 3.5rem;
 }
+@media screen and (min-width: 1440px) {
+  .countdown {
+    justify-content: center;
+  }
+}
 
 .flip {
   display: flex;
   flex-direction: column;
   text-align: center;
+}
+@media screen and (min-width: 1440px) {
+  .flip:not(:last-child) {
+    margin-right: 3.5em;
+  }
 }
 .flip__title {
   margin-top: 2em;
@@ -75,11 +91,16 @@ body {
 }
 
 .card {
-  font-size: 2.25rem;
+  font-size: 2rem;
   color: var(--soft-red);
   position: relative;
   margin-left: auto;
   margin-right: auto;
+}
+@media screen and (min-width: 1440px) {
+  .card {
+    font-size: 4rem;
+  }
 }
 .card::after, .card::before {
   width: 0.1875em;
@@ -115,23 +136,23 @@ body {
   border-radius: 0px 0px 4px 4px;
 }
 .card__back::before {
-  content: attr(data-initial);
-  padding-top: 0.175em;
+  padding-top: 10%;
   border-radius: 4px 4px 0px 0px;
 }
 .card__back::after {
+  content: attr(data-initial);
   bottom: 0;
-  line-height: 0.03125em;
+  line-height: 0;
   box-shadow: 3px 4px 1px black;
 }
 .card__front {
-  width: 1.6625em;
+  width: 1.6875em;
   height: 0.84375em;
   position: absolute;
   transform-style: preserve-3d;
   bottom: 0px;
   left: 0;
-  transform: rotateX(0deg);
+  transform: rotateX(180deg);
   transform-origin: top;
 }
 .card__front::after, .card__front::before {
@@ -146,15 +167,14 @@ body {
   overflow: hidden;
 }
 .card__front::after {
-  line-height: 0em;
+  content: attr(data-last);
+  line-height: 0;
   border-radius: 0px 0px 4px 4px;
   box-shadow: 0px 4px 1px black;
-  transform: translateX(0.5px);
 }
 .card__front::before {
-  content: attr(data-last);
-  padding-top: 0.175em;
-  transform: rotateX(180deg) translateY(0.5px);
+  padding-top: 10%;
+  transform: rotateX(180deg);
   border-radius: 4px 4px 0px 0px;
 }
 
@@ -163,6 +183,23 @@ body {
   text-align: center;
   letter-spacing: 0.375em;
   align-self: flex-end;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media screen and (min-width: 1440px) {
+  .launch-container {
+    margin-bottom: 3em;
+  }
+}
+
+.title--h1 {
+  font-size: 1.125rem;
+}
+@media screen and (min-width: 1440px) {
+  .title--h1 {
+    font-size: 1.25rem;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

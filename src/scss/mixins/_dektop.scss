@@ -1,0 +1,7 @@
+@use "../config/variables" as *;
+@use "sass:map" ;
+@mixin desktop(){
+    @media screen and(min-width:map.get($breakpoint,"desktop")) {
+        @content
+    }
+}
