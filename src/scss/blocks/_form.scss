@@ -1,0 +1,62 @@
+@use "../config/variables" as *;
+@use "../mixins/to-desktop" as *;
+@use "../mixins/dektop" as *;
+@use "../functions/px-to-measure" as *;
+.modal {
+  position: fixed;
+  top: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 500;
+}
+
+.form {
+  width: min(500px, 80vw);
+  height: 450px;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: rgba(37, 29, 44, 0.8);
+  border: 2px solid var(--very-mostly-black);
+  border-radius: px-to-measure(18px, "rem");
+  color: var(--soft-red);
+  border: 3px solid var(--grayish-blue);
+  padding: px-to-measure(14px, "rem");
+  &__field {
+    text-align: center;
+  }
+  &__input {
+    font-size: px-to-measure(18px, "rem");
+    width: px-to-measure(64px, "em");
+    border-radius: 0.4rem;
+    padding: px-to-measure(4px, "em");
+    background-color: var(--dark-desaturated-blue);
+    color: var(--white);
+    text-align: center;
+    &:focus {
+      border: 1px solid var(--soft-red);
+    }
+  }
+  &__label {
+    letter-spacing: 5px;
+    margin-bottom: px-to-measure(10px, "rem");
+  }
+  &__button {
+    background-color: var(--dark-desaturated-blue);
+    color: var(--soft-red);
+    padding: px-to-measure(8px, "em") px-to-measure(16px, "em");
+    border-radius: 0.4rem;
+    @include desktop {
+      &:hover {
+        background-color:  var(--soft-red);
+      cursor: pointer;
+      color:var(--very-dark-blue) ;
+      }
+    }
+  }
+}
