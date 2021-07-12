@@ -233,6 +233,9 @@ body {
   align-items: center;
   z-index: 500;
 }
+.modal--show {
+  display: none;
+}
 
 .form {
   width: min(500px, 80vw);
