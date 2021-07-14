@@ -5,12 +5,12 @@
       input(type="number",id="days" ,name="days",class="form__input" min="0",max="99" required)
     .form__field 
       label(for="hours",class="form__label")="HOURS"
-      input(type="number", name="hours",id="hours",class="form__input" min="0",max="99" required)
+      input(type="number", name="hours",id="hours",class="form__input" min="0",max="59" required)
     .form__field 
       label(for="minutes",class="form__label")="MINUTES"
-      input(type="number", name="minutes",id="minutes",class="form__input" min="0",max="99" required) 
+      input(type="number", name="minutes",id="minutes",class="form__input" min="0",max="59" required) 
     .form__field 
       label(for="seconds",class="form__label")="SECONDS"
-      input(type="number", name="seconds",id="seconds",class="form__input" min="0",max="99" required) 
+      input(type="number", name="seconds",id="seconds",class="form__input" min="0",max="59" required) 
     .form__actions 
       button(type="submit",class="form__button")="START" 
