@@ -172,7 +172,6 @@ body {
   transform-style: preserve-3d;
   bottom: 0px;
   left: 0;
-  transform: rotateX(180deg);
   transform-origin: top;
 }
 .card__front::after, .card__front::before {
@@ -196,6 +195,10 @@ body {
   padding-top: 10%;
   transform: rotateX(180deg);
   border-radius: 4px 4px 0px 0px;
+}
+.card__front--move {
+  transition: transform 1s linear;
+  transform: rotateX(180deg);
 }
 
 .launch-container {

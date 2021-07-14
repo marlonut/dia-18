@@ -1,4 +1,4 @@
-mixin flip-wrapp({title,timer,extraClass="flip__wrapper"})
+mixin flip-wrapp({title,timer,extraClass="flip__wrapper",id})
   .flip
-    +card-flip({extraClass,dataAttr:timer})
+    +card-flip({extraClass,dataAttr:timer,id})
     h2.flip__title=title

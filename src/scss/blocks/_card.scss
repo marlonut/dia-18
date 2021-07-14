@@ -61,7 +61,7 @@
     transform-style: preserve-3d;
     bottom: 0px;
     left: 0;
-    transform: rotateX(180deg) ;
+   
     transform-origin: top;
     &::after,&::before{
       background-color: var(--dark-desaturated-blue);
@@ -85,6 +85,10 @@
       transform: rotateX(180deg);
       border-radius: 4px 4px 0px 0px;
      
+    }
+    &--move{
+      transition: transform 1s linear;
+      transform: rotateX(180deg) ;
     }
   }
 }
