@@ -1,7 +1,17 @@
+@use "../mixins/to-desktop" as *;
+@use "../mixins/dektop" as *;
+@use "../functions/px-to-measure" as *;
 .social-icons {
     display: flex;
     justify-content: space-between;
     width: min(60%, 140px);
     margin-left: auto;
     margin-right: auto;
+    &__icon {
+        @include desktop {
+            &:hover {
+                filter: invert(73%) sepia(51%) saturate(4955%) hue-rotate(310deg) brightness(101%) contrast(102%);
+            }
+        }
+    }
 }

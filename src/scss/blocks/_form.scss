@@ -12,7 +12,8 @@
   justify-content: center;
   align-items: center;
   z-index: 500;
-  &--show{
+  // display: none;
+  &--show {
     display: none;
   }
 }
@@ -56,9 +57,9 @@
     border-radius: 0.4rem;
     @include desktop {
       &:hover {
-        background-color:  var(--soft-red);
-      cursor: pointer;
-      color:var(--very-dark-blue) ;
+        background-color: var(--soft-red);
+        cursor: pointer;
+        color: var(--very-dark-blue);
       }
     }
   }

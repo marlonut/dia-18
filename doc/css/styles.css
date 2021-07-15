@@ -80,6 +80,11 @@ body {
   margin-left: auto;
   margin-right: auto;
 }
+@media screen and (min-width: 1440px) {
+  .social-icons__icon:hover {
+    filter: invert(73%) sepia(51%) saturate(4955%) hue-rotate(310deg) brightness(101%) contrast(102%);
+  }
+}
 
 .countdown {
   display: flex;
@@ -126,6 +131,7 @@ body {
   width: 0.1875em;
   content: "";
   position: absolute;
+  backface-visibility: hidden;
   height: 0.1875em;
   background-color: var(--very-dark-blue);
   top: 50%;
@@ -149,6 +155,7 @@ body {
   content: attr(data-last);
   overflow: hidden;
   position: absolute;
+  backface-visibility: hidden;
   left: 0;
   width: 100%;
   height: 50%;
@@ -197,7 +204,7 @@ body {
   border-radius: 4px 4px 0px 0px;
 }
 .card__front--move {
-  transition: transform 1s linear;
+  transition: transform 0.8s cubic-bezier(0.19, 1, 0.22, 1);
   transform: rotateX(180deg);
 }
 
